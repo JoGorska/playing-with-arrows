@@ -5,6 +5,14 @@
 
 // Vanilla JavaScript Function
 
+function addNumbers (a, b) {
+    return a + b
+};
+
+let sum = addNumbers (2, 2);
+
+console.log(sum)
+
 // Arrow Function With Parameters
 
 // Single Line Arrow Function With Parameters
