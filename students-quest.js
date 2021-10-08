@@ -28,8 +28,9 @@ const averagePoints = (arr, subject) => {
             const studentObject = arr[i]
             // I need to access results value for each student
             const resultObject = studentObject["results"]
-            // result of a subject for a student
+            // checks if student has this subjects, if he has, than adds to all results in subject
             if (subject in resultObject) {
+                // result of a subject for a student
                 oneResultInSubject = resultObject[subject]
 
 
