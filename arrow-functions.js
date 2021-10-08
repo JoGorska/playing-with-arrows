@@ -32,5 +32,23 @@ let sumOneLine = addTwoNumbersOneLine(5, 10);
 console.log(`sum One line arrow function ${sumOneLine}`)
 
 // Implicit Returns
+// only one parameter
+
+const saySomething = message => console.log(message);
+saySomething("Hello There!");
+
+// no parameters
+
+const sayHello = () => console.log("hello");
+sayHello();
 
 // Returning Multiple Lines
+
+const returnsMultipleLines = () => (
+    `
+    <p>
+    This is a multi line string!
+    </p>
+    `
+);
+console.log(returnsMultipleLines());
