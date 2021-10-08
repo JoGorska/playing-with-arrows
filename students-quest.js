@@ -20,25 +20,27 @@ let students = [
 ];
 
 const averagePoints = (arr, subject) => {
-    let allResultsInSubject = []
+    let allResultsInSubject = 0
 
     for (let i in arr) {
-        // I need to access each student seperately
-        const studentObject = arr[i]
-        // I need to access results value for each student
-        const resultObject = studentObject["results"]
-        // result of a subject for a student
-        oneResultInSubject = resultObject[subject]
 
-        console.log(oneResultInSubject)
-        return allResultsInSubject += oneResultInSubject
-        
+            // I need to access each student seperately
+            const studentObject = arr[i]
+            // I need to access results value for each student
+            const resultObject = studentObject["results"]
+            // result of a subject for a student
+            if (subject in resultObject) {
+                oneResultInSubject = resultObject[subject]
 
 
-        
+                // ads one result in subject for each student to all results
+                allResultsInSubject += parseInt(oneResultInSubject)
+            }
     }
-    return allResultsInSubject
+    // all results in subject i a sum of all results for all students
+    // arr.lenght is a number of students in the array
+    return allResultsInSubject / arr.length
 };
 
-    let result = averagePoints(students, "maths");
-    console.log(`result = ${result}`)
+    let result = averagePoints(students, "art");
+    console.log(result)
