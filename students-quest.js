@@ -19,6 +19,17 @@ let students = [
     }
 ];
 
+// You will create a function using the arrow syntax that should return the average marks of a subject. 
+// Your function should loop through the array that is passed in. For each student contained within, you should: 1. Check if the subject passed into your function is in said student's results object; 2. If it is, add it to a cumulative total of all results for that subject. 3. Finally, return the average result for the subject.
+// You will only be asked to return the average marks for the subject english, but your function must be able to return the average marks if another subject name is used, and the tests will check for this.
+// Declare a variable named averagePoints using the keyword const
+// Assign it an arrow function, which should take two parameters named: arr and subject
+// The function should have a return statement
+// Declare a variable named: result using the keyword let
+// Assign it the return value from calling the function averagePoints, and passing it the students array and one of the following strings: 'maths', 'english', 'cad', 'science', 'art'
+// log out the variable result to see its value
+// The function should return the correct value no matter which subject is used.
+
 const averagePoints = (arr, subject) => {
     let allResultsInSubject = 0
 
