@@ -31,7 +31,10 @@ let students = [
 // The function should return the correct value no matter which subject is used.
 
 const averagePoints = (arr, subject) => {
+    // variable to collect sum of all resutls
     let allResultsInSubject = 0
+    // variable to collect how many results we get
+    let howManyResults = 0
 
     for (let i in arr) {
 
@@ -47,12 +50,15 @@ const averagePoints = (arr, subject) => {
 
                 // ads one result in subject for each student to all results
                 allResultsInSubject += parseInt(oneResultInSubject)
+                howManyResults += 1
             }
     }
-    // all results in subject i a sum of all results for all students
-    // arr.lenght is a number of students in the array
-    return allResultsInSubject / arr.length
+
+    // all results in subject is a sum of all results for all students for this subject
+    // how many results is a number of results that have been summarised
+    // division gives us an average points
+    return allResultsInSubject / howManyResults
 };
 
-    let result = averagePoints(students, "art");
+    let result = averagePoints(students, "maths");
     console.log(result)
